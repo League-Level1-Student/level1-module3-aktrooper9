@@ -10,6 +10,8 @@ PImage carright;
 Car car1 = new Car(carx,carly,140,3);
 Car car2 = new Car(carx,190,140,4);
 Car car3 = new Car(carx,carry,140,5);
+Car car4 = new Car(carx,340,140,6);
+Car car5 = new Car(carx,430,140,7);
 void setup(){
 size(800, 600);
  background= loadImage("froggerBackground.png"); 
@@ -24,14 +26,22 @@ size(800, 600);
 }
 
 void draw(){
+  if(y==100){
+    y=530;
+  
+  }
   intersects(car1);
   intersects(car2);
   intersects(car3);
+   intersects(car4);
+      intersects(car5);
   image (background,0,0);
  image(frog,x,y);
 car1.display();
 car2.display();
 car3.display();
+car4.display();
+car5.display();
   
 
 }
